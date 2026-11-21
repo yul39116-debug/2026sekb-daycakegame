@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffeb95">
+  <meta name="description" content="은광이의 케이크 부대끼 — 재료를 골라 케이크를 완성하는 인터랙티브 게임">
+  <title>은광이의 케이크 부띠끄</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app" aria-label="은광이의 케이크 부대끼 게임">
+    <div id="game" class="game" aria-label="게임 화면">
+      <img id="screen-image" class="full-image scene" src="assets/1main.png" alt="게임 시작 화면" draggable="false">
+      <div id="ingredients-layer" class="ingredients-layer" aria-hidden="true"></div>
+      <div id="controls" class="controls"></div>
+      <audio id="bgm" src="assets/bgm.mp3" autoplay loop preload="auto"></audio>
+      <div id="status" class="sr-only" role="status" aria-live="polite"></div>
+      <div id="help" class="help" hidden>
+        <section class="help-card" role="dialog" aria-modal="true" aria-labelledby="help-title">
+          <h1 id="help-title">🎂 게임 방법</h1>
+          <p>게임 시작을 누르고, 대화창의 화살표를 눌러 이야기를 진행해 줘!</p>
+          <p>재료 화면에서는 위쪽 버튼을 눌러 원하는 재료를 자유롭게 추가할 수 있어. 이미 선택한 재료를 한 번 더 누르면 취소돼.</p>
+          <p>준비가 끝나면 <b>다음으로</b>를 누르고, 마지막에 완성된 케이크의 결과를 확인해 봐!</p>
+          <button id="close-help" class="close-help" type="button">알겠어 ♡</button>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
