@@ -128,7 +128,7 @@ let selected = new Set();
 let selectionOrder = [];
 let previousFocus = null;
 
-function asset(file) { return ASSET_DIR + file; }
+function asset(file) { return ASSET_DIR + file.normalize('NFD'); }
 
 function preload(file) {
   if (!file) return;
